@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+<div class="container-fluid p 3 my-3 border">
+    <div class="jumbotron">    
+    <h2>JavaScript Syntax</h2>
+    <p>Syntax is the set of rules, how JavaScript programs are constructed.</p>
+    </div>
+    <h3>JavaScript Values </h3>
+    <p>The JavaScript syntax defies two types of values:</p>
+    <list>
+        <ul>fixed values (called <b>Literals</b>.)</ul>
+        <ul>variable values (called <b>Variables</b>.)</ul>
+    </list>
+
+    <h2>JavaScript Literals</h2>
+    <p>The two most impportant syntax rules for fixed values are:</p>
+    <list>
+        <ul><b>Numbers</b> written with or without decimals.</ul>
+        <ul><b>Strings</b> are text, written within double or single quotes.</ul>
+    </list>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <button type="button" onclick="myFunction()">Click here for numbers!</button>
+
+    <button type="button" onclick="myFunction2()">Click here for strings!</button>
+
+    <h2>JavaScript Operators</h2>
+    <p>JavaScript uses<b>arithmetic operators</b>( + - * / ) to <b>compute</b> values:</p>
+    <p> ( 5 + 6 ) * 10 </p>
+
+    <p id="demo4"></p>
+
+    <p>JavaScript uses an <b>assgnnment operator</b> ( = ) to <b>assign</b> values to variables:</p>
+    <p id="demo5"></p>
+    
+    <h2>JavaScript Expressions</h2>
+    <p>An exression is a combination of values, variables, and operators, which computes to a value.</p>
+    <p>The computation is called an evaluation.</p>
+    <p>For example, 5 * 10 evaluates to 50:</p>
+    <p id="demo6"></p>
+
+    <p>The values can be of various types, such as number and strings.</p>
+    <p>For example, "Bob" + " " "Hawke", evaluates to "Bob Hawke":</p>
+    <p id="demo7"></p>
+
+    <h2>JavaScript Keywords</h2>
+    <p>JavaScript <b>keywords</b> are used to identify actions to be performed.</p>
+    <p>The <b>var</b> keyword tells the browser to create variables:</p>
+    <p>var t, s;  // t = 5 + 6 and s = t * 10;</p>
+    <p id="demo8"></p>
+
+
+    <h2>JavaScript Comments</h2>
+    <p>Not all JavaScript statments are <i>executed</i>.</p>
+    <p>Code after double slahses // or between /* and*/ is treated as a <b>comment</b>.</p>
+    <p>Comments are ginored, and will not be executed:</p>
+    <p> var p = 5; // will be executed</p>
+    <p>// var p = 6; will not be executed</p>
+    <p id="demo9"></p>
+
+    <h2>JavaScript Identifiers</h2>
+    <p>Identifiers are names.</p>
+    <p>In JavaScript, identifiers are used to name variables (and keywords, and functions and labels).</p>
+    <p>The rules for legal names are much the same in most programming languages.</p>
+    <p>In JavaScript, the first character must be a letter, or an underscore (_), or a dollar sign ($).</p>
+    <p>Subsequent characters may be letter, digits, underscores or dollar signs.</p>
+
+    <p>Numbers are not allowed as the first character.</p>
+    <p>This way JavaScript can easily distinguish identifiers from numbers.</p>
+
+    <h2>JavaScript is Case Sensitive</h2>
+    <p>All JavaScript identifiers are <b>case sensitive</b>.</p>
+    <p>The variables <i>lastName</i> and <i>lastname</i>, are two different variables.</p>
+    <p id="demo10"></p>
+    <p>JavaScript does not interpret <b>VAR</b> or <b>Var</b> as the keyword <b>var</b>.</p>
+
+    <h2>JavaScript and CamelCase</h2>
+    <p>Histroically, programmers have used different ways of joining multiple words into one variable name:</p>
+    <h3>Hyphens(are not allowed in JavaScript as they are reserved for subtractions):</h3>
+    <p>first-name, last-name, master-card, inter=city.</p>
+    <h3>Underscore</h3>
+    <p>first_name, last_name, master_card, inter_city.</p>
+    <h3>Lower Cael Case:</h3>
+    <p>JavaScript programmers tend to use camel case that starts with a lowercase letter:</p>
+    <p>firstName, lastName, masterCard, interCity.</p>
+
+    <h2>JavaScript Character Set</h2>
+    <p>JavaScript uses the <b>Unicode</b> character set.</p>
+    <p>Unicode covers (almost) all the characters, punctuations, and symbols in the world.</p>
+    
+    <script>
+        function myFunction(){
+            document.getElementById("demo").innerHTML = 10.50;
+            document.getElementById("demo1").innerHTML = 10;
+        }
+        function myFunction2(){
+            document.getElementById("demo2").innerHTML = "This is a string is enclosed in double quotation marks.";
+            document.getElementById("demo3").innerHTML =  'This is a string is enclosed in single quotation marks.';   
+        }
+
+        document.getElementById("demo4").innerHTML = (5 + 6) * 10;
+        
+        var x, y;
+        x = 5;
+        y = 6;
+        document.getElementById("demo5").innerHTML = x + y;
+
+        document.getElementById("demo6").innerHTML = 5 * 10;
+
+        document.getElementById("demo7").innerHTML = "Bob" + " " + "Hawke";
+        
+        var t, s;
+        t = 5 + 6;
+        s = t * 10;
+        document.getElementById("demo8").innerHTML = s;
+
+        var p;
+        p = 5;
+        //p = 6; will not be executed
+        document.getElementById("demo9").innerHTML = p;
+
+        var lastname, lastName;
+        lastName = "Jones"
+        lastname = "Smith";
+        document.getElementById("demo10").innerHTML = lastName;
+
+
+        
+        
+    </script>
+</div>    
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Example One</title>
+    <title>Bootstrap Example</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <h3>Column 1</h3>
+            <p>Bootstrap: browser compatability</p>
+          </div>
+          <div class="col-sm-4">
+            <h3>Column 2</h3>
+            <p>Bootstrap: responsive features</p>
+          </div>
+          <div class="col-sm-4">
+            <h3>Column 3</h3>
+            <p>Bootstrap: easy to use and mobile first</p>
+          </div>
+        </div>
+      </div>
+</head>
+<body>
+    <div class="jumbotron text-centre">
+    <h1>Introduction to JavaScript?</h1>
+    </div>
+    <div class="container p-3 my-3 bg-light border">
+            <h2>What can JavaScript?</h2>
+            <p id="demo">JavaScript can change HTML content.</p>
+<!-- Change the text on the screen from one text to another. It doesn't matter if the quotation marks are single or double. -->
+            <button type="button"
+            onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'class="btn btn-success">Click Me!</button>
+<!-- The same code is written but with single quotation marks. -->
+            <button type="button"
+            onclick="document.getElementById('demo').innerHTML = 'Hello again JavaScript!'" class="btn btn-warning">Click me!</button>
+            <h2> What can JavaScript Do?</h2>
+
+            <p> JavaScript can change HTML attribute values.</p>
+
+            <p>In this case JavaScript changes the value of the src(source) attribute of an image.</p>
+
+            <button
+            onclick="document.getElementById('myImage').src='bulb_on.png'" class="btn btn-danger">Turn on the light</button>
+    
+            <img id="myImage" src="bulb_off.png" style="width:100px">
+    
+            <button
+            onclick="document.getElementById('myImage').src='bulb_off.png'" class="btn btn-dark">Turn off the light</button>   
+
+            <h2> What Can JavaScript Do?</h2>
+    
+            <p id="demo2">JavaScript can change the style of an HTML element.</p>
+    
+
+            <button type="button"
+            onclick="document.getElementById('demo2').style.fontSize='35px'" class="btn btn-primary">Click Me!</button>
+    
+            <h2>What can JavaScript Do?</h2>
+
+            <p>JavaScript can show hidden HTML elements.</p>
+
+            <p id="demo3" style="display:none">Hello JavaScript!</p>
+
+            <button type="button"
+            onclick="document.getElementById('demo3').style.display='block'" class="btn btn-info">Click Me!</button>
+    </div>
+</body>
+</html>

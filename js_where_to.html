@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>JavaScript Exercises</title>
+    <!-- Javascipt in the head -->
+    <script> 
+    function myFunction() {
+    document.getElementById("demo").innerHTML = "Paragraph changed.";
+    }
+    </script>
+
+</head>
+<body>
+    <h1>JavaScript in the Head</h1>
+    <p id="demo">A paragraph.</p>
+    <button type="button" onclick="myFunction()">Try it</button>
+    
+    <p id="demo2"></p>
+<hr>
+
+<!-- External JavaScript is advantageous as it separates the HTML and cod, makes 
+    HTML and JavaSCript easier to read and maintain and Catched JavaScript files can speed up page loads. 
+To add several script files to one page - use several script tags, one script tag for each external JS page.-->
+    <p id="demo3">Another paragraph.</p>
+
+    <button type="button"
+    onclick = "myFunction2()">Try it</button>
+
+    <p>(myFunction2 is stored in an external file called external_ex2.js)</p>
+
+    <script src="external_ex2.js"></script>
+
+<hr>
+
+    <h2>JavaScript in body</h2>
+<!-- Javascript in the body, in between sript tags -->
+    <script>
+        document.getElementById("demo2").innerHTML = "My First JavaScript";
+    </script>
+</body>
+</html>
