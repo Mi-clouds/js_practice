@@ -137,6 +137,52 @@
 
     <p>var pos = str.lastIndexOf("locate");</p>
     <p id="demo14"></p>
+    <p>Both indexOf(), and lastIndexOf() return -1 if the text is not found.</p>
+    <p>Both methods also accept a second paramenter as the starting position for the search:</p>
+    <p>var str = "Please locate where 'locate' occurs!"</p>
+    <p>var pos = str.indexOf("locate, 15);</p>
+    <p>The lastIndexOf() methods searches backwards (from the end to the beginning), meaning: if the second parameter is 15, the search starts at position 15, and searches to the beginning of string.</p>
+    <p>var st = "Please locate where 'locate' occurs!";</p>
+    <p>var par = str.lastIndexOf("locate",, 15);</p>
+
+    <h2>Searching for a String in a String</h2>
+    <p>The search() method searches a string for a specified value and returns the psotion of the match.</p>
+    <p>var str = "Pease locate where 'locate' occurs!";</p>
+    <p>var pos = str.search("locate");</p>
+
+    <h2>Did you notice?</h2>
+    <p>The two methods, indexOf() and search(), are equal?</p>
+    <p>They accept the same arguments (parameters), and return the same value?</p>
+    <p>The two methods are NOT equal. These are the differences:</p>
+    <p>The search() method cannot take a second start position argument.</p>
+    <p>The indexOf() method cannot take powerful search values (regular expressions).</p>
+    
+    <h2>Extracting String Parts</h2>
+    <p>There are three methods for extracting a part of a string:</p>
+    <ul>
+        <li>slice(start, end)</li>
+        <li>substring(start, end)</li>
+        <li>substr(start, length)</li>
+    </ul>
+    <h2>The slice() Method</h2>
+    <p>slice() extracts a part of a string and returns the extracted part in a new string.</p>
+    <p>The method takes 2 paramters the start position, and the end position (end not included).</p>
+    <p>This example slices out a portion of a string from position 7 to position 12(13-1)</p>
+    <p>var str = "apple, banana, kiwi";</p>
+    <p>var res = str.slice(7, 13);</p>
+    <p>The result of res will be: banana</p>
+    <p>If a parameter is negative, the position is counted from the end of the string.</p>
+    <p>This example slices out a portion of a string from position -12 to position -6:</p>
+    <p>var res = str.slice(-12, -6);</p>
+    <p>The result will still be: banana</p>
+    <p>If you omit the second parameter, the method will slice out the rest of the string:</p>
+    <p>var res = str.slice(7);</p>
+    <p>or counting from the end:</p>
+    <p>var res = str.slice(-2);</p>
+    <p>negative psoitions do not work in Internet Explorer 8 and earlier.</p>
+    <h2>The substring() method</h2>
+
+
 
 
 <script>
@@ -185,6 +231,8 @@
     var str = "Please send where 'send' occurs!";
     var pos = str.lastIndexOf('send');
     document.getElementById("demo14").innerHTML = pos;
+
+
 </script>
 
 </body>
